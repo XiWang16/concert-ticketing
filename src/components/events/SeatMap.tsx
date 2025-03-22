@@ -14,8 +14,8 @@ type SeatMapProps = {
 const SEAT_ROWS = ['A', 'B', 'C', 'D', 'E'];
 const SEAT_COLUMNS = [1, 2, 3, 4, 5, 6, 7, 8];
 
-const getRandomStatus = () => {
-  const statuses = ['available', 'reserved', 'unavailable'];
+const getRandomStatus = (): 'available' | 'reserved' | 'unavailable' => {
+  const statuses: Array<'available' | 'reserved' | 'unavailable'> = ['available', 'reserved', 'unavailable'];
   const weights = [0.7, 0.2, 0.1]; // 70% available, 20% reserved, 10% unavailable
   
   const randomValue = Math.random();
